@@ -3,6 +3,7 @@ package com.chslcompany.dictionary.data.util
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
 import com.chslcompany.dictionary.domain.model.Meaning
+import com.chslcompany.dictionary.domain.model.Phonetic
 import com.google.gson.reflect.TypeToken
 
 @ProvidedTypeConverter
@@ -22,4 +23,20 @@ class Converters(
             obj = meanings,
             type = object : TypeToken<ArrayList<Meaning>>(){}.type
         ) ?: "[]"
+
+
+    @TypeConverter
+    fun fromPhoneticJson(json : String) : List<Phonetic> =
+       jsonParser.fromJson<ArrayList<Phonetic>>(
+           json = json,
+           type = object:TypeToken<ArrayList<Phonetic>>(){}.type
+       ) ?: emptyList()
+
+    @TypeConverter
+    fun toPhoneticJson(phonetics : List<Phonetic>) : String =
+        jsonParser.toJson(
+            obj = phonetics,
+            type = object : TypeToken<ArrayList<Phonetic>>(){}.type
+        ) ?: "[]"
+
 }
