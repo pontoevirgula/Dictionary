@@ -2,7 +2,9 @@ package com.chslcompany.dictionary.data.local.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.chslcompany.dictionary.data.local.entity.WordInfoDbEntity
+import com.chslcompany.dictionary.data.util.Converters
 
 
 @Database(
@@ -10,6 +12,7 @@ import com.chslcompany.dictionary.data.local.entity.WordInfoDbEntity
     version = 1
 )
 
+@TypeConverters(Converters::class)
 abstract class WordInfoDatabase : RoomDatabase() {
 
     abstract val dao : WordInfoDao
