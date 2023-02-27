@@ -1,5 +1,6 @@
 package com.chslcompany.dictionary.data.remote.dto
 
+import com.chslcompany.dictionary.data.local.entity.WordInfoDbEntity
 import com.chslcompany.dictionary.domain.model.*
 
 data class WordInfoDTO(
@@ -9,8 +10,8 @@ data class WordInfoDTO(
     val sourceUrls: List<String>,
     val word: String
 ){
-    fun toWordInfo() : WordInfo =
-        WordInfo(
+    fun toWordInfoDb() : WordInfoDbEntity =
+        WordInfoDbEntity(
             license = license.toLicense(),
             meanings = meanings.map { it.toMeaning() },
             phonetics = phonetics.map { it.toPhonetic() },
