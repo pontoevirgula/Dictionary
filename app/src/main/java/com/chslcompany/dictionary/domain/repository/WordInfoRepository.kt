@@ -31,14 +31,14 @@ class WordInfoRepositoryImpl(
         } catch (e: HttpException) {
             emit(
                 Resource.Error(
-                    message = "Detectamos algumas instabilidades.\nVolte novamente mais tarde.",
+                    message = SERVER_ERROR,
                     data = wordInfo
                 )
             )
         } catch (e: IOException) {
             emit(
                 Resource.Error(
-                    message = "Não foi possível se conectar.\n Verifique sua internet.",
+                    message = INTERNET_ERROR,
                     data = wordInfo
                 )
             )
@@ -51,5 +51,10 @@ class WordInfoRepositoryImpl(
             it.toWordInfo()
         }
         return wordInfo
+    }
+
+    companion object{
+        private const val SERVER_ERROR = "Detectamos algumas instabilidades.\nVolte novamente mais tarde."
+        private const val INTERNET_ERROR = "Não foi possível se conectar.\n Verifique sua internet."
     }
 }

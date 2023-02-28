@@ -1,4 +1,4 @@
-package com.chslcompany.dictionary.ui.theme
+package com.chslcompany.dictionary.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

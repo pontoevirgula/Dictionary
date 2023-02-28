@@ -1,4 +1,4 @@
-package com.chslcompany.dictionary
+package com.chslcompany.dictionary.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.chslcompany.dictionary.ui.theme.DictionaryTheme
+import com.chslcompany.dictionary.presentation.ui.theme.DictionaryTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
