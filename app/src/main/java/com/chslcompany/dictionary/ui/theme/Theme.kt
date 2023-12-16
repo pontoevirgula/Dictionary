@@ -1,4 +1,4 @@
-package com.chslcompany.dictionary.feature_dictionary.presentation.ui.theme
+package com.chslcompany.dictionary.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

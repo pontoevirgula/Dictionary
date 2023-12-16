@@ -1,6 +1,6 @@
 package com.chslcompany.dictionary.feature_dictionary.domain.usecase
 
-import com.chslcompany.dictionary.util.Resource
+import com.chslcompany.dictionary.core.util.Resource
 import com.chslcompany.dictionary.feature_dictionary.domain.model.WordInfo
 import com.chslcompany.dictionary.feature_dictionary.domain.repository.WordInfoRepository
 import kotlinx.coroutines.flow.Flow

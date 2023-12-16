@@ -1,4 +1,4 @@
-package com.chslcompany.dictionary.util
+package com.chslcompany.dictionary.core.util
 
 sealed class Resource<T>(val data : T? = null, val message : String? = null) {
     class Loading<T>(data : T? = null) : Resource<T>(data)

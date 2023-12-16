@@ -4,7 +4,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.chslcompany.dictionary.util.Resource
+import com.chslcompany.dictionary.core.util.Resource
 import com.chslcompany.dictionary.feature_dictionary.domain.usecase.GetWordInfoUseCase
 import com.chslcompany.dictionary.feature_dictionary.presentation.WordInfoState
 import dagger.hilt.android.lifecycle.HiltViewModel

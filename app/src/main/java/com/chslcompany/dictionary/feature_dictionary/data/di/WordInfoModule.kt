@@ -4,9 +4,9 @@ import android.app.Application
 import androidx.room.Room
 import com.chslcompany.dictionary.feature_dictionary.data.local.db.WordInfoDatabase
 import com.chslcompany.dictionary.feature_dictionary.data.remote.DictionaryApi
-import com.chslcompany.dictionary.util.GsonParser
+import com.chslcompany.dictionary.feature_dictionary.data.repository.WordInfoRepositoryImpl
+import com.chslcompany.dictionary.feature_dictionary.data.util.GsonParser
 import com.chslcompany.dictionary.feature_dictionary.domain.repository.WordInfoRepository
-import com.chslcompany.dictionary.feature_dictionary.domain.repository.WordInfoRepositoryImpl
 import com.chslcompany.dictionary.feature_dictionary.domain.usecase.GetWordInfoUseCase
 import com.google.gson.Gson
 import dagger.Module

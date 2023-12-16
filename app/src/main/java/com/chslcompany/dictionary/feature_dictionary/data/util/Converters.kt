@@ -1,4 +1,4 @@
-package com.chslcompany.dictionary.util
+package com.chslcompany.dictionary.feature_dictionary.data.util
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
