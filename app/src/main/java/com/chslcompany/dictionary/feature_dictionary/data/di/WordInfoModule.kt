@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.chslcompany.dictionary.feature_dictionary.data.local.db.WordInfoDatabase
 import com.chslcompany.dictionary.feature_dictionary.data.remote.DictionaryApi
 import com.chslcompany.dictionary.feature_dictionary.data.repository.WordInfoRepositoryImpl
+import com.chslcompany.dictionary.feature_dictionary.data.util.Converters
 import com.chslcompany.dictionary.feature_dictionary.data.util.GsonParser
 import com.chslcompany.dictionary.feature_dictionary.domain.repository.WordInfoRepository
 import com.chslcompany.dictionary.feature_dictionary.domain.usecase.GetWordInfoUseCase
@@ -39,7 +40,7 @@ object WordInfoModule {
     fun provideDatabase(app: Application): WordInfoDatabase =
         Room.databaseBuilder(
             app, WordInfoDatabase::class.java, "word_db"
-        ).addTypeConverter(GsonParser(Gson()))
+        ).addTypeConverter(Converters(GsonParser(Gson())))
             .build()
 
     @Provides

@@ -8,18 +8,18 @@ import com.chslcompany.dictionary.feature_dictionary.domain.model.Meaning
 import com.chslcompany.dictionary.feature_dictionary.domain.model.Phonetic
 
 data class WordInfoDTO(
-    val license: LicenseDto,
     val meanings: List<MeaningDto>,
+    val origin : String,
+    val phonetic : String,
     val phonetics: List<PhoneticDto>,
     val sourceUrls: List<String>,
     val word: String
 ){
     fun toWordInfoDb() : WordInfoDbEntity =
         WordInfoDbEntity(
-            license = license.toLicense(),
             meanings = meanings.map { it.toMeaning() },
-            phonetics = phonetics.map { it.toPhonetic() },
-            sourceUrls = sourceUrls,
+            phonetic = phonetic,
+            origin = origin,
             word = word
         )
 }

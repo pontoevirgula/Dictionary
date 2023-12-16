@@ -9,19 +9,17 @@ import com.chslcompany.dictionary.feature_dictionary.domain.model.WordInfo
 
 @Entity
 data class WordInfoDbEntity(
-    val license: License,
     val meanings: List<Meaning>,
-    val phonetics: List<Phonetic>,
-    val sourceUrls: List<String>,
+    val phonetic: String,
+    val origin: String,
     val word: String,
     @PrimaryKey val id : Int? = null
 ){
     fun toWordInfo() : WordInfo =
         WordInfo(
-            license = license,
             meanings = meanings,
-            phonetics = phonetics,
-            sourceUrls = sourceUrls,
+            phonetic = phonetic,
+            origin = origin,
             word = word
         )
 }

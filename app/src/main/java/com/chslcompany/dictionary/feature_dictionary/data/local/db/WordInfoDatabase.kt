@@ -14,8 +14,5 @@ import com.chslcompany.dictionary.feature_dictionary.data.util.Converters
 
 @TypeConverters(Converters::class)
 abstract class WordInfoDatabase : RoomDatabase() {
-
     abstract val dao : WordInfoDao
-
-
 }

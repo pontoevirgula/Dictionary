@@ -1,10 +1,9 @@
 package com.chslcompany.dictionary.feature_dictionary.domain.model
 
 data class WordInfo(
-    val license: License,
     val meanings: List<Meaning>,
-    val phonetics: List<Phonetic>,
-    val sourceUrls: List<String>,
+    val phonetic: String,
+    val origin: String,
     val word: String
 )
 
@@ -37,6 +36,6 @@ data class Meaning(
 data class Definition(
     val antonyms: List<Any>,
     val definition: String,
-    val example: String,
+    val example: String?,
     val synonyms: List<Any>
 )

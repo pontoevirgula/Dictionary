@@ -23,20 +23,4 @@ class Converters(
             obj = meanings,
             type = object : TypeToken<ArrayList<Meaning>>(){}.type
         ) ?: "[]"
-
-
-    @TypeConverter
-    fun fromPhoneticJson(json : String) : List<Phonetic> =
-       jsonParser.fromJson<ArrayList<Phonetic>>(
-           json = json,
-           type = object:TypeToken<ArrayList<Phonetic>>(){}.type
-       ) ?: emptyList()
-
-    @TypeConverter
-    fun toPhoneticJson(phonetics : List<Phonetic>) : String =
-        jsonParser.toJson(
-            obj = phonetics,
-            type = object : TypeToken<ArrayList<Phonetic>>(){}.type
-        ) ?: "[]"
-
 }
