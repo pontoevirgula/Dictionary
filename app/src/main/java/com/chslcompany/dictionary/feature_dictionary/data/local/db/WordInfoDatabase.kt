@@ -9,7 +9,7 @@ import com.chslcompany.dictionary.feature_dictionary.data.util.Converters
 
 @Database(
     entities = [WordInfoDbEntity::class],
-    version = 1
+    version = 3
 )
 
 @TypeConverters(Converters::class)

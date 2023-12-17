@@ -7,12 +7,6 @@ data class WordInfo(
     val word: String
 )
 
-data class License(
-    val name: String,
-    val url: String
-)
-
-
 data class Phonetic(
     val audio: String,
     val license: LicensePhonetic,

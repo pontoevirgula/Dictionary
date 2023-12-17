@@ -2,15 +2,14 @@ package com.chslcompany.dictionary.feature_dictionary.data.remote.dto
 
 import com.chslcompany.dictionary.feature_dictionary.data.local.entity.WordInfoDbEntity
 import com.chslcompany.dictionary.feature_dictionary.domain.model.Definition
-import com.chslcompany.dictionary.feature_dictionary.domain.model.License
 import com.chslcompany.dictionary.feature_dictionary.domain.model.LicensePhonetic
 import com.chslcompany.dictionary.feature_dictionary.domain.model.Meaning
 import com.chslcompany.dictionary.feature_dictionary.domain.model.Phonetic
 
 data class WordInfoDTO(
     val meanings: List<MeaningDto>,
-    val origin : String,
-    val phonetic : String,
+    val origin : String?,
+    val phonetic : String?,
     val phonetics: List<PhoneticDto>,
     val sourceUrls: List<String>,
     val word: String
@@ -18,20 +17,9 @@ data class WordInfoDTO(
     fun toWordInfoDb() : WordInfoDbEntity =
         WordInfoDbEntity(
             meanings = meanings.map { it.toMeaning() },
-            phonetic = phonetic,
-            origin = origin,
+            phonetic = phonetic ?: "",
+            origin = origin ?: "",
             word = word
-        )
-}
-
-data class LicenseDto(
-    val name: String,
-    val url: String
-){
-    fun toLicense() : License =
-        License(
-            name = name,
-            url = url
         )
 }
 
